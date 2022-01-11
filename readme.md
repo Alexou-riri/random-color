@@ -1,7 +1,19 @@
-Application that return random color
+# Application that return random color
 
-### request hue
+## request hue
 
-### request luminosity
+---
 
-### request random color
+---
+
+## request luminosity
+
+---
+
+---
+
+## request random color
+
+---
+
+---
