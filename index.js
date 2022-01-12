@@ -1,14 +1,25 @@
-import { hasUncaughtExceptionCaptureCallback } from 'process';
-import randomColor from 'randomcolor'; // import the script
+import chalk from 'chalk';
+import randomColor from 'randomcolor'; // import the scripts
 
-const color = process.argv[2];
-
-randomColor({
-  hue: 'random',
-  luminosity: 'random',
+const color = randomColor({
+  hue: process.argv[2],
+  luminosity: process.argv[3],
 });
 
-console.log(randomColor());
+const square = `
+###############################
+###############################
+###############################
+#######                  ######
+#######     ${color}      ######
+#######                  ######
+###############################
+###############################
+###############################`;
+
+console.log(chalk.hex(color)(square));
+
+/* doing a full shape of #:
 
 const n = 9;
 const y = 31;
@@ -20,34 +31,4 @@ for (let i = 0; i < n; i++) {
   }
   string += '\n';
 }
-
-console.log(string);
-
-console.log();
-
-/* const columns = 31;
-const row = 9;
-let i;
-let y;
-
-for (i = 0; i < columns; i++) {
-  for (y = 0; y < row; y++) {
-    console.log('#');
-  }
-  console.log('#');
-} */
-
-/* let square = `
-###############################
-###############################
-###############################
-###############################
-###############################
-###############################
-###############################
-###############################
-###############################`;
-
-console.log(square); */
-
-// Java Program to Print Square Pattern
+ */
